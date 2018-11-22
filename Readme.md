@@ -1,4 +1,4 @@
-First add the following host record to your hosts file `/etc/host` on most systems
+First add the following host record to your hosts file `/etc/hosts` on most systems
 
     127.0.0.1 too.many.sub.domains.local
 
