@@ -1,0 +1,12 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/php:7.1-node-browsers
+    steps:
+      - checkout
+      - run: npm install
+      - run: php -S localhost:80
+      - run: ./node_modules/.bin/cypress run
+      - run: npm install cypress@13.1.1
+      - run: ./node_nodules/.bin/cypress run
