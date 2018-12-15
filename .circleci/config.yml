@@ -6,7 +6,7 @@ jobs:
     steps:
       - checkout
       - run: npm install
-      - run: echo "127.0.0.1 too.many.sub.domains.local" >> /etc/hosts
+      - run: sudo echo "127.0.0.1 too.many.sub.domains.local" >> /etc/hosts
       - run: php -S 0.0.0.0:8585 &
       - run: ./node_modules/.bin/cypress run
       - run: npm install cypress@13.1.1
